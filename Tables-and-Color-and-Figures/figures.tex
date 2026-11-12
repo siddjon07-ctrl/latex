@@ -1,0 +1,96 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\title{Figures and Images in LaTeX}
+\author{Sahil Kumar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%--------------------------------
+\section{Inserting Images}
+%--------------------------------
+
+The graphicx package is used to insert images.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{mnit-logo.png}
+    \caption{MNIT Jaipur Institute Logo}
+    \label{fig:mnit-logo}
+\end{figure}
+
+As shown in Figure~\ref{fig:mnit-logo},
+this is the logo of MNIT Jaipur.
+
+%--------------------------------
+\section{Resizing Images}
+%--------------------------------
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.25\textwidth]{mnit-logo.png}
+    \caption{Resized MNIT Logo}
+\end{figure}
+
+%--------------------------------
+\section{Trimming Images}
+%--------------------------------
+
+The trim option removes portions of an image.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[
+        width=0.4\textwidth,
+        trim=1cm 1cm 1cm 1cm,
+        clip
+    ]{mnit-logo.png}
+    \caption{MNIT Logo after Trimming}
+\end{figure}
+
+%--------------------------------
+\section{Rotating Images}
+%--------------------------------
+
+The angle option rotates an image.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[
+        width=0.4\textwidth,
+        angle=45
+    ]{mnit-logo.png}
+    \caption{MNIT Logo Rotated by 45 Degrees}
+\end{figure}
+
+%--------------------------------
+\section{Minipage Environment}
+%--------------------------------
+
+The minipage environment allows us to place
+text and images side by side.
+
+\begin{center}
+
+\begin{minipage}{0.40\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{mnit-logo.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.50\textwidth}
+    \textbf{MNIT Jaipur}
+
+    Malaviya National Institute of Technology Jaipur
+    is a technical institute located in Jaipur, Rajasthan.
+
+    It offers undergraduate and postgraduate
+    programmes in engineering and technology.
+\end{minipage}
+
+\end{center}
+
+\end{document}

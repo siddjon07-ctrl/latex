@@ -1,0 +1,198 @@
+\documentclass{article}
+
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{amsmath}
+
+% Custom colors
+\definecolor{myblue}{RGB}{10,60,200}
+\definecolor{softpink}{HTML}{FFB6C1}
+\definecolor{mygreen}{RGB}{30,130,80}
+
+\title{Tables and Colors in LaTeX}
+\author{Sahil Kumar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%--------------------------------
+\section{Basic Tables}
+%--------------------------------
+
+The tabular environment is used to create tables.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|l|}
+        \hline
+        \textbf{Course Code} & \textbf{Semester} & \textbf{Course Name} \\
+        \hline
+        22CST201 & III & Data Communications \\
+        22CST202 & III & Design and Analysis of Algorithms \\
+        22CST203 & III & Digital Circuits and Microprocessors \\
+        22CST204 & III & Mathematics for AI \\
+        22CST205 & III & Object Oriented Analysis and Design \\
+        22CST206 & III & Technical Writing \\
+        22HST201 & III & Social Sciences and Professional Ethics \\
+        \hline
+    \end{tabular}
+    \caption{Third Semester Courses at MNIT Jaipur}
+    \label{tab:courses}
+\end{table}
+
+Table~\ref{tab:courses} shows the courses of Semester III.
+
+%--------------------------------
+\section{Advanced Tables}
+%--------------------------------
+
+\subsection{Multicolumn}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multicolumn{3}{|c|}{\textbf{MNIT Jaipur - Semester III}} \\
+        \hline
+        Course Code & Semester & Course Name \\
+        \hline
+        22CST201 & III & Data Communications \\
+        22CST202 & III & DAA \\
+        \hline
+    \end{tabular}
+    \caption{Example of Multicolumn}
+\end{table}
+
+\subsection{Multirow}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Semester} & \textbf{Course Code} & \textbf{Course} \\
+        \hline
+        \multirow{3}{*}{III}
+        & 22CST201 & Data Communications \\
+        \cline{2-3}
+        & 22CST202 & DAA \\
+        \cline{2-3}
+        & 22CST203 & Digital Circuits \\
+        \hline
+    \end{tabular}
+    \caption{Example of Multirow}
+\end{table}
+
+\subsection{Table Positioning}
+
+The table placement options control where LaTeX tries to place a table.
+
+\begin{itemize}
+    \item h: Here
+    \item t: Top of the page
+    \item b: Bottom of the page
+    \item p: Separate page for floats
+    \item !: Relax placement restrictions
+\end{itemize}
+
+%--------------------------------
+\section{Colors in LaTeX}
+%--------------------------------
+
+\subsection{Basic Text Colors}
+
+\textcolor{red}{Red Text}
+
+\textcolor{blue}{Blue Text}
+
+\textcolor{green}{Green Text}
+
+\textcolor{violet}{Violet Text}
+
+\textcolor{myblue}{Custom Blue Text}
+
+\subsection{Defining Custom Colors}
+
+Custom colors can be defined using RGB and HTML values.
+
+\textcolor{softpink}{This text uses an HTML-defined color.}
+
+\textcolor{mygreen}{This text uses an RGB-defined color.}
+
+\subsection{Colored Mathematical Expressions}
+
+\[
+\textcolor{magenta}{E=mc^2}
+\]
+
+\[
+\textcolor{blue}{\sum_{i=1}^{n} i}
+\]
+
+\[
+\textcolor{orange}{\int_0^1 x^2\,dx}
+\]
+
+%--------------------------------
+\section{Colored Tables}
+%--------------------------------
+
+The xcolor package with the table option allows
+us to add colors to table rows and cells.
+
+\subsection{Colored Rows}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|l|}
+        \hline
+        \rowcolor{myblue}
+        \textcolor{white}{\textbf{Course Code}} &
+        \textcolor{white}{\textbf{Semester}} &
+        \textcolor{white}{\textbf{Course Name}} \\
+        \hline
+
+        \rowcolor{blue!10}
+        22CST201 & III & Data Communications \\
+        \hline
+
+        \rowcolor{green!15}
+        22CST202 & III & Design and Analysis of Algorithms \\
+        \hline
+
+        \rowcolor{yellow!20}
+        22CST203 & III & Digital Circuits and Microprocessors \\
+        \hline
+
+        22CST204 & III & Mathematics for AI \\
+        \hline
+    \end{tabular}
+    \caption{Table with Colored Rows}
+\end{table}
+
+\subsection{Colored Cells}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Course & Semester & Status \\
+        \hline
+        Data Communications &
+        III &
+        \cellcolor{green!25} Completed \\
+        \hline
+        DAA &
+        III &
+        \cellcolor{yellow!30} Ongoing \\
+        \hline
+        Digital Circuits &
+        III &
+        \cellcolor{red!20} Pending \\
+        \hline
+    \end{tabular}
+    \caption{Table with Colored Cells}
+\end{table}
+
+\end{document}
