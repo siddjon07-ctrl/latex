@@ -1,0 +1,241 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Mathematical Typesetting in LaTeX}
+\author{Siddharth Kumar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Inline and Display Mathematics}
+
+Inline mathematics appears within a sentence, for example
+\(x^2 + y^2 = z^2\).
+
+Display mathematics appears on a separate line:
+
+\[
+x^2 + y^2 = z^2
+\]
+
+\section{Superscripts and Subscripts}
+
+\[
+a_i^2 + b_j^3
+\]
+
+\[
+x_{ij}, \quad x^{n+1}, \quad a_{i,j}^{2}
+\]
+
+\section{Greek Letters and Mathematical Symbols}
+
+Greek letters:
+
+\[
+\alpha,\ \beta,\ \gamma,\ \delta,\ \lambda,\ \pi,\ \sigma
+\]
+
+Relations and set symbols:
+
+\[
+a \leq b,\quad x \neq y,\quad
+A \subseteq B,\quad A \cup B,\quad A \cap B
+\]
+
+Binary operators:
+
+\[
+a \times b,\quad A \otimes B,\quad A \oplus B
+\]
+
+\section{Fractions and Roots}
+
+\[
+\frac{a+b}{c}, \qquad
+\sqrt{x}, \qquad
+\sqrt[3]{y}
+\]
+
+\section{Mathematical Fonts}
+
+Different mathematical fonts can be used to represent expressions.
+
+\[
+\mathcal{ABC} \qquad
+\mathfrak{ABC} \qquad
+\mathrm{ABC}
+\]
+
+\[
+\mathnormal{ABC} \qquad
+\mathbf{ABC} \qquad
+\mathsf{ABC}
+\]
+
+\section{Mathematical Display Styles}
+
+The same expression can appear in different mathematical styles.
+
+\[
+\sum_{i=1}^{n} i
+\]
+
+\[
+\displaystyle \sum_{i=1}^{n} i
+\]
+
+\[
+\textstyle \sum_{i=1}^{n} i
+\]
+
+\[
+\scriptstyle \sum_{i=1}^{n} i
+\]
+
+\[
+\scriptscriptstyle \sum_{i=1}^{n} i
+\]
+
+\section{Summation, Product and Integration}
+
+Summation:
+
+\[
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+\]
+
+Product:
+
+\[
+\prod_{k=1}^{m} k
+\]
+
+Definite integral:
+
+\[
+\int_{0}^{1} x^2 \, dx = \frac{1}{3}
+\]
+
+Other integral symbols:
+
+\[
+\oint_C f(z)\,dz
+\]
+
+
+\section{Numbered Equations}
+
+The equation environment automatically numbers equations.
+
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+\begin{equation}
+    \int_0^1 x^2 \, dx = \frac{1}{3}
+\end{equation}
+
+\section{Aligned Equations}
+
+The align environment aligns multiple equations
+at a common point.
+
+\begin{align}
+    a + b &= c \\
+    x + y &= 10 \\
+    2x + 3y &= 15
+\end{align}
+
+\section{Arrays}
+
+The array environment creates columns with
+different alignment options.
+
+\[
+\begin{array}{lcr}
+\text{Left} & \text{Center} & \text{Right} \\
+a & b & c \\
+1 & 2 & 3
+\end{array}
+\]
+
+\section{Matrices}
+
+\subsection{Basic Matrix}
+
+\[
+\begin{matrix}
+1 & 2 \\
+3 & 4
+\end{matrix}
+\]
+
+\subsection{Matrix with Parentheses}
+
+\[
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+\]
+
+\subsection{Matrix with Square Brackets}
+
+\[
+\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+\]
+
+\subsection{Matrix with Curly Braces}
+
+\[
+\begin{Bmatrix}
+x & y \\
+z & w
+\end{Bmatrix}
+\]
+
+\subsection{Determinant}
+
+\[
+\begin{vmatrix}
+1 & 2 \\
+3 & 4
+\end{vmatrix}
+\]
+
+\subsection{Double Vertical Bars}
+
+\[
+\begin{Vmatrix}
+a & b \\
+c & d
+\end{Vmatrix}
+\]
+
+\section{Description Lists}
+
+The description environment creates lists
+containing terms and their explanations.
+
+\begin{description}
+    \item[Matrix] A rectangular arrangement of numbers
+    in rows and columns.
+
+    \item[Determinant] A scalar value associated
+    with a square matrix.
+
+    \item[Integral] A mathematical operation used
+    to calculate areas and accumulated quantities.
+\end{description}
+
+
+\end{document}
