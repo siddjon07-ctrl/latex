@@ -1,0 +1,99 @@
+
+\documentclass[12pt,a4paper]{article}
+
+\title{\Huge\bfseries Introduction to LaTeX Document Structure}
+\author{
+    Siddarth Kumar \\
+    \small MNIT Jaipur
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document demonstrates the basic structure of a
+LaTeX document. It covers document classes, title
+formatting, and the abstract environment.
+\end{abstract}
+
+\section{Introduction}
+
+LaTeX provides different document classes depending
+on the type of document being created.
+
+\section{Document Classes}
+
+The document class determines the overall structure
+and behavior of a document.
+
+Some commonly used document classes are:
+
+\begin{itemize}
+    \item \textbf{article}: Used for short documents,
+    papers and reports without chapters.
+
+    \item \textbf{report}: Used for longer documents
+    that require chapters.
+
+    \item \textbf{book}: Used for books and theses,
+    supporting chapters and front and back matter.
+\end{itemize}
+
+\subsection{Choosing a Document Class}
+
+The document class is specified using
+\texttt{\textbackslash documentclass}.
+
+For example:
+
+\begin{verbatim}
+\documentclass{article}
+\documentclass{report}
+\documentclass{book}
+\end{verbatim}
+
+We can also specify font size and paper size:
+
+\begin{verbatim}
+\documentclass[12pt,a4paper]{article}
+\end{verbatim}
+
+\section{Customizing the Title}
+
+We can customize the title and author using
+formatting commands.
+
+\begin{verbatim}
+\title{\Huge\bfseries My Document}
+\author{\Large Sahil Kumar}
+\date{\today}
+\end{verbatim}
+
+Additional information can be placed below the title.
+
+\begin{center}
+    \textbf{Supervisor:} Faculty Name \\
+    \textbf{Course:} Technical Writing
+\end{center}
+
+\section{Abstract}
+
+The abstract environment provides a short summary
+of the document.
+
+It is generally placed after the title and before
+the main content.
+
+\section{Bibliography and Citations}
+
+BibTeX helps us manage references using a
+separate bibliography file.
+
+We can cite a book using the cite command
+\cite{kn:gnus}.
+
+\bibliographystyle{plain}
+\bibliography{test}
+\end{document}

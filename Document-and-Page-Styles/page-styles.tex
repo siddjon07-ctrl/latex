@@ -1,0 +1,165 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{sectsty}
+\usepackage{enumitem}
+% Page margins
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% Header and footer customization
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{LaTeX Journey}
+\fancyhead[C]{MNIT Jaipur}
+\fancyhead[R]{\today}
+
+\fancyfoot[C]{Page \thepage}
+
+\title{Page Styles and Layout in LaTeX}
+\author{Siddarth Kumar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Page Styles}
+
+The \texttt{\textbackslash pagestyle} command
+controls the appearance of headers and footers.
+
+Some predefined page styles are:
+
+\begin{itemize}
+    \item \textbf{plain}: Displays the page number
+    at the bottom of the page.
+
+    \item \textbf{empty}: Removes headers and footers.
+
+    \item \textbf{headings}: Displays section or
+    chapter headings in the header.
+\end{itemize}
+
+\section{Customizing Page Margins}
+
+The geometry package allows us to customize
+the margins of a document.
+
+For example, the current document uses:
+
+\begin{verbatim}
+\usepackage{geometry}
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+\end{verbatim}
+
+\section{Custom Headers and Footers}
+
+The fancyhdr package allows us to customize
+the header and footer.
+
+\begin{itemize}
+    \item \texttt{\textbackslash fancyhf\{\}} clears
+    existing header and footer settings.
+
+    \item \texttt{\textbackslash fancyhead[L]}
+    sets the left header.
+
+    \item \texttt{\textbackslash fancyhead[C]}
+    sets the center header.
+
+    \item \texttt{\textbackslash fancyhead[R]}
+    sets the right header.
+
+    \item \texttt{\textbackslash fancyfoot[C]}
+    sets the center footer.
+\end{itemize}
+
+\section{Paragraph Spacing}
+
+We can control paragraph indentation and spacing.
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+
+This is the first paragraph. It demonstrates
+the paragraph indentation and spacing settings.
+
+This is the second paragraph. Notice the
+additional vertical space between paragraphs.
+
+\section{Horizontal and Vertical Spacing}
+
+Horizontal spacing:
+
+This is \hspace{1cm} spaced text.
+
+Vertical spacing:
+
+This is the first line.
+
+\vspace{0.5cm}
+
+This is the second line after vertical spacing.
+
+\section{Page Breaks}
+
+The \texttt{\textbackslash newpage} command
+starts the following content on a new page.
+
+\newpage
+
+This content starts on a new page.
+
+
+%--------------------------------
+\section{Customizing Section Headings}
+%--------------------------------
+
+\sectionfont{\Large\bfseries\color{blue}}
+\subsectionfont{\itshape\color{red}}
+
+\section{Page Background Color}
+
+The xcolor package allows us to change
+the background color of a page.
+
+\pagecolor{yellow!80}
+
+This page has a dark yellow background.
+
+\newpage
+\nopagecolor
+
+The original background color is restored.
+
+\section{Customizing Lists}
+
+The enumitem package allows us to customize
+the appearance of lists.
+
+\begin{itemize}[label=\textbullet, leftmargin=*]
+    \item First customized item.
+    \item Second customized item.
+    \item Third customized item.
+\end{itemize}
+
+\begin{enumerate}[label=\Roman*.]
+    \item First item.
+    \item Second item.
+    \item Third item.
+\end{enumerate}
+
+\end{document}
